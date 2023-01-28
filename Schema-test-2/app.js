@@ -1,5 +1,5 @@
 const express = require('express');
-const studentRouter = require('./Routes/studentRoutes');
+const router = require('./Routes/endpointRoutes');
 
 const app = express();
 
@@ -17,6 +17,6 @@ app.use(express.static(`${__dirname}/public`));
 //2) ROUTES
 //always use mounting after the declare the variable ⬇️
 
-app.use('/api/v1/student', studentRouter);
+app.use('/api/v1/student', router);
 
 module.exports = app;
